@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/scss/style.css">
-    <title> . . . </title>
+    <script src="/js/ac18.js"></script>
+    <title>Find the number</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,28 +18,19 @@
             justify-content: center;
             align-items: center;
         }
-
-        /* Le conteneur principal avec flexbox */
         .main-container {
             display: flex;
             width: 100%;
             height: 100%;
         }
-
-        /* La div gauche avec la vidéo en arrière-plan */
-        .video-section {
-            flex: 1; /* Occupe 50% de l'espace */
-            position: relative;
-            overflow: hidden;
-        }
-
-        .video-section video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* La vidéo couvre la totalité du conteneur */
+        .image-section {
+            flex: 1; 
+            background-image: url('/img/a persone alone c2ae4640-46c1-4976-9a69-bee387083ca1.png');
+            background-size: cover; 
+            background-position: center;
         }
         .content-section {
-            flex: 1; /* Occupe 50% de l'espace */
+            flex: 1; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -46,14 +38,12 @@
             padding: 20px;
             text-align: center;
         }
-
         .input {
             padding: 10px;
             font-size: 1.2em;
             margin: 20px 0;
             width: 250px;
         }
-
         .buttons a {
             text-decoration: none;
             font-size: 1.5em;
@@ -65,33 +55,20 @@
             display: inline-block;
             margin-top: 20px;
         }
-
         .buttons a:hover {
             background-color: darkred;
         }
-
     </style>
 </head>
 <body>
     <div class="main-container">
-        <div class="video-section">
-            <video autoplay muted loop>
-                <source src="/img/66fbe3c84e676b6909120489.mp4" type="video/mp4">
-            </video>
+        <div class="image-section">
         </div>
         <div class="content-section">
-            <h1 style="font-size: 2em; display: block;">We’ve arrived, but what is this?</h1><br>
-            <h1 style="font-size: 2em; display: block;">This place isn’t in any house.</h1><br>
-            <h1 style="font-size: 2em; display: block;">And there are zombies in front of us!</h1><br>
-            
-            <h1 style="font-size: 2em; display: block;">You can't go back</h1>
-            <img src="/img/Press_Z.png" alt="" width="60" height="60">
-            <div class="buttons">
-                <a href="backi.html" id="nextButton" style="opacity: 1;">Next</a>
-            </div>
+            <h1 style="font-size: 2em; display: block;">He wanted to find this world, but he doesn't know if it's alive.</h1><br>
+            <h1 style="font-size: 2em; display: block;">He must try... because it's the only solution.</h1><br>
+            <h1 style="font-size: 2em; display: block;">Think... Find the world's phone number Valen reawakens This task remains an attempt. Find the world's phone number...</h1><br>
         </div>
     </div>
-    <script src="/js/BlockJs.js"></script>
-    <script src="/js/SucureJS.js"></script>
 </body>
 </html>
