@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/scss/style.css">
+    <title> . . . </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Le conteneur principal avec flexbox */
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* La div gauche avec la vidéo en arrière-plan */
+        .video-section {
+            flex: 1; /* Occupe 50% de l'espace */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* La vidéo couvre la totalité du conteneur */
+        }
+        .content-section {
+            flex: 1; /* Occupe 50% de l'espace */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .input {
+            padding: 10px;
+            font-size: 1.2em;
+            margin: 20px 0;
+            width: 250px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: crimson;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .buttons a:hover {
+            background-color: darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="video-section">
+            <video autoplay muted loop>
+                <source src="/img/66fbe3c84e676b6909120489.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="content-section">
+            <h1 style="font-size: 2em; display: block;">We have arrived but what is this?</h1><br>
+            <h1 style="font-size: 2em; display: block;">This place is not in any house</h1><br>
+            <h1 style="font-size: 2em; display: block;">And there are zombies in front of us</h1>
+            <h1 style="font-size: 2em; display: block;">You can't go back</h1>
+            <img src="/img/Press_Z.png" alt="" width="60" height="60">
+            <div class="buttons">
+                <a href="backi.html" id="nextButton" style="opacity: 1;">Next</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/BlockJs.js"></script>
+    <script src="/js/SucureJS.js"></script>
+</body>
+</html>

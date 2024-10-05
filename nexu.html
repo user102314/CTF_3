@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/scss/style.css">
+    <title>Congratulations You make It !</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Le conteneur principal avec flexbox */
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* La div gauche avec l'image en arrière-plan */
+        .image-section {
+            flex: 1; /* Occupe 50% de l'espace */
+            background-image: url('/img/fotor-ai-20240929132527.jpg');
+            background-size: cover; /* L'image couvre la totalité du conteneur */
+            background-position: center;
+        }
+
+        /* La div droite avec le contenu */
+        .content-section {
+            flex: 1; /* Occupe 50% de l'espace */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .input {
+            padding: 10px;
+            font-size: 1.2em;
+            margin: 20px 0;
+            width: 250px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: crimson;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .buttons a:hover {
+            background-color: darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="image-section">
+        </div>
+        <div class="content-section">
+            <h1 style="font-size: 2em; display: block;">you just ran over the zombies</h1><br>
+            <h1 style="font-size: 2em; display: block;">you managed to remove the danger but this zombie is strange</h1><br>
+            <h1 style="font-size: 2em; display: block;">He was carrying a painting or a picture</h1><br>
+            <h1 style="font-size: 2em; display: block;">Elias wanted to see that painting but surprisingly</h1><br>
+            <div class="buttons">
+                <a href="Avn.html" id="nextButton" style=" opacity: 1;">Next</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/BlockJs.js"></script>
+    <script src="/js/SucureJS.js"></script>
+</body>
+</html>

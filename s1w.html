@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/scss/style.css">
+    <title>Physique et Chimie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-section {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .input {
+            padding: 10px;
+            font-size: 1.2em;
+            margin: 20px 0;
+            width: 250px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: crimson;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .buttons a:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="video-section">
+            <video autoplay muted loop>
+                <source src="/img/clideo_editor_d6e661382b6a44148575e5296f1606e8.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="content-section">
+            <h1 style="font-size: 2em;">Finally you have found the scientist hiding in his house</h1><br>
+            <h1 style="font-size: 2em;">Now you are in the final stage which is mixing the antidote</h1><br>
+            <h1 style="font-size: 2em;">In front of you is a video to help you find the recipe</h1>
+            
+            <h1>Hint: <span style="color: beige;">Repeat the video</span></h1><br>
+            
+            <input type="text" name="text" class="input" placeholder="Type your text" id="inputCode">
+            
+            <div class="buttons">
+                <a href="#" id="nextButton" style="pointer-events: none; opacity: 0.5;">Next</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/C.js"></script>
+    <script>
+        (function() {
+            const secretCode = formule; 
+            const inputField = document.getElementById('inputCode');
+            const nextButton = document.getElementById('nextButton');
+
+            function encrypt(text, shift) {
+                return text.split('').map(char => String.fromCharCode(char.charCodeAt(0) + shift)).join('');
+            }
+
+            function decrypt(text, shift) {
+                return text.split('').map(char => String.fromCharCode(char.charCodeAt(0) - shift)).join('');
+            }
+
+            function validateInput() {
+                const userInput = inputField.value.trim();
+                if (encrypt(userInput, 3) === secretCode) {
+                    var slm = decrypt("gzql", 3); 
+                    nextButton.href = slm + ".html"; 
+                    nextButton.style.pointerEvents = "auto";
+                    nextButton.style.opacity = "1";
+                } else {
+                    nextButton.href = "#";
+                    nextButton.style.pointerEvents = "none";
+                    nextButton.style.opacity = "0.5";
+                }
+            }
+
+            inputField.addEventListener('keyup', validateInput);
+        })();
+    </script>
+</body>
+</html>

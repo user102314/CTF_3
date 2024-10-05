@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/scss/style.css">
+    <title>Find the batrie !</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Le conteneur principal avec flexbox */
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* La div gauche avec l'image en arrière-plan */
+        .image-section {
+            flex: 1; /* Occupe 50% de l'espace */
+            background-image: url('/img/image0_0\ \(1\).jpg');
+            background-size: cover; /* L'image couvre la totalité du conteneur */
+            background-position: center;
+        }
+
+        /* La div droite avec le contenu */
+        .content-section {
+            flex: 1; /* Occupe 50% de l'espace */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .input {
+            padding: 10px;
+            font-size: 1.2em;
+            margin: 20px 0;
+            width: 250px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: crimson;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .buttons a:hover {
+            background-color: darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Conteneur principal pour les deux sections -->
+    <div class="main-container">
+        <!-- Section gauche avec image en arrière-plan -->
+        <div class="image-section">
+        </div>
+
+        <!-- Section droite avec le contenu -->
+        <div class="content-section">
+            
+            
+            
+            <h1 style="font-size: 2em; display: block;">Congratulations on having the key but I think the situation is still complicated .</h1><br>
+            <h1 style="font-size: 2em; display: block;">Because the car doesn't have a battery</h1><br>
+            <h1 style="font-size: 2em; display: block;">Help Our hero to find the right battery</h1>
+            <h1 style="font-size: 2em; display: block;">
+            </h1><br>
+            <h1 style="font-size: 2em; display: block;">Help...to find the right battery</h1><br>
+            <h1>hint: <span style="color: beige;">Not everything you're looking for is here.</span></h1><br>
+            
+            <input type="text" name="text" class="input" placeholder="Type your text" id="inputCode">
+            
+            <div class="buttons">
+                <a href="#" id="nextButton" style="pointer-events: none; opacity: 0.5;">Next</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/C.js"></script>
+    <script src="/js/BlockJs.js"></script>
+    <script src="/js/SucureJS.js"></script>
+    <script>
+        (function() {
+            const secretCode = encryptedText2;
+            const inputField = document.getElementById('inputCode');
+            const nextButton = document.getElementById('nextButton');
+    
+            function validateInput() {
+                const userInput = inputField.value.trim();
+                if (encrypt(userInput, 3) === secretCode) {
+                    var slm = decrypt("dydqw_edfnl", 3); 
+                    nextButton.href = slm + ".html"; 
+                    nextButton.style.pointerEvents = "auto";
+                    nextButton.style.opacity = "1";
+                } else {
+                    nextButton.href = "#";
+                    nextButton.style.pointerEvents = "none";
+                    nextButton.style.opacity = "0.5";
+                }
+            }
+    
+            inputField.addEventListener('keyup', validateInput);
+        })();
+    </script>
+    
+    
+</body>
+</html>
